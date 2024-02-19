@@ -6,7 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class MainAnnotation {
 
-    public static void main(String[] args) {
+      public static void main(String[] args) {
         ApplicationContext context= new AnnotationConfigApplicationContext("org.example.Dao","org.example.Metier");
         IMetier metier= context.getBean(IMetier.class);
 

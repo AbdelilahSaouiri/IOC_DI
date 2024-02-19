@@ -8,13 +8,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class MetierImpl implements IMetier{
 
-    @Autowired
-   @Qualifier("mongodb")
+
     private IDao dao;
 
-    public void setDao(IDao dao){
+    public MetierImpl(IDao dao)
+    {
         this.dao=dao;
     }
+//    public void setDao(IDao dao){
+//        this.dao=dao;
+//    }
 
     @Override
     public double calculer() {
